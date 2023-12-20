@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/file1.css">
+  <title>Your Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa;
+    }
+
+    .landing-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 2;
+    }
+
+    h2 {
+      text-align: center;
+      color: #262626;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #3897f0;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 10px;
+      color: #3897f0;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .login-popup {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Scandinavian Filter</h1>
+</header>
+<div class="page-info">
+  <p>Please Login in through instagram to access this Filter.</p>
+  <p>You can login by clicking the below button!</p>
+</div>
+
+<div class="landing-container">
+  <button id="loginButton">Log In</button>
+  <div id="loginPopup" class="login-popup">
+    <h2>Instagram Login</h2>
+    <form method="POST" action="/login">
+      <input type="text" name="username_or_email" placeholder="Username or Email">
+      <input type="password" name="password" placeholder="Password">
+      <button type="submit">Log In</button>
+      <button onclick="exit">Go Back</button>
+    </form>
+    <p class="login-link" onclick="showSignUp()">Don't have an account? Sign up</p>
+    
+  </div>
+</div>
+
+<script>
+  const loginButton = document.getElementById('loginButton');
+  const loginPopup = document.getElementById('loginPopup');
+  
+  const exit = ()=>{
+    loginPopup.style.display = 'none';
+  }
+
+  loginButton.addEventListener('click', () => {
+    loginPopup.style.display = 'block';
+  });
+
+  function showSignUp() {
+    alert('Redirect to sign-up page or implement sign-up functionality.');
+  }
+</script>
+
+</body>
+</html>

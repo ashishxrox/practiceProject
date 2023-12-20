@@ -1,0 +1,49 @@
+
+
+body{
+    background: rgb(34,193,195);
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(238,45,253,1) 100%);
+}
+
+header{
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1{
+    background-color: rgba(255,255,255,0.7);
+    padding: 10px 15px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.page-info{
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 50px;
+    font-size: 20px;
+    background-color: rgba(255,255,255,0.7);
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+.login-popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-popup form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
